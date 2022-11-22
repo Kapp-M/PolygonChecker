@@ -21,14 +21,11 @@ int main() {
 			int* triangleSidesPtr = getTriangleSides(triangleSides);
 			//printf_s("! %d\n", triangleSidesPtr[0]);
 			char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
-			float angle1 = triangle_angle1(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
-			float angle2 = triangle_angle2(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
-			float angle3 = triangle_angle3(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
-
 			printf_s("%s\n", result);
-			printf_s("Angle1 = %f\n", angle1);
-			printf_s("Angle2 = %f\n", angle2);
-			printf_s("Angle3 = %f\n", angle3);
+			break;
+		case 2:
+			printf("\nRectangle selected.\n\n");
+			RectangleSolver();
 			break;
 		case 0:
 			continueProgram = false;
@@ -51,6 +48,7 @@ void printWelcome() {
 
 int printShapeMenu() {
 	printf_s("1. Triangle\n");
+	printf("2. Rectangle \n");
 	printf_s("0. Exit\n");
 
 	int shapeChoice;
